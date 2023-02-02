@@ -17,8 +17,6 @@ class UseCaseRegistry(Generic[T]):
         and handled expections.
         """
         self.max_length = max_length
-
-        self._already_checked = False
         self._storage: list[T] = []
 
     def is_empty(self) -> bool:
@@ -37,8 +35,4 @@ class UseCaseRegistry(Generic[T]):
 
     def get_state(self) -> list[T]:
         """Return, only once, the state of the registry."""
-        if self._already_checked:
-            raise RuntimeError("Storage has already been checked.")
-
-        self._already_checked = True
         return self._storage
