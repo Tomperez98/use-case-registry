@@ -6,7 +6,7 @@ build-backend = "hatchling.build"
 name = "usecase_registry"
 description = "Registry class for Use Case implementation. They are basically meaningfull lists with some constraints."
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.9"
 license = "MIT"
 keywords = []
 authors = [
@@ -15,6 +15,7 @@ authors = [
 classifiers = [
   "Development Status :: 4 - Beta",
   "Programming Language :: Python",
+  "Programming Language :: Python :: 3.9",
   "Programming Language :: Python :: 3.10",
   "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: Implementation :: CPython",
