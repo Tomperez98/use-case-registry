@@ -25,6 +25,8 @@ class UseCaseRegistry(Generic[T]):
 
     def prune_state(self) -> None:
         """Prune state."""
+        if self.is_empty():
+            raise RuntimeError("Registry is already empty.")
         return self._storage.clear()
 
     def add_value(self, v: T) -> None:

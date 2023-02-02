@@ -20,6 +20,12 @@ class TestUseCaseRegistry:
         registry.prune_state()
         assert registry.is_empty()
 
+    def test_empty_registry_cannot_be_prune(self) -> None:
+        """Test empty registry cannot be pruned."""
+        registry = UseCaseRegistry[int](max_length=10)
+        with pytest.raises(RuntimeError):
+            registry.prune_state()
+
     def test_registry_can_only_store_up_to_max_capacity(self) -> None:
         """Test registry fails when storage exceeds capacity."""
         registry = UseCaseRegistry[int](max_length=10)
