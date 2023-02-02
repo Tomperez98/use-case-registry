@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "usecase_registries"
+name = "usecase_registry"
 description = "Registry class for Use Case implementation. They are basically meaningfull lists with some constraints."
 readme = "README.md"
 requires-python = ">=3.10"
@@ -22,6 +22,7 @@ classifiers = [
 ]
 # https://hatch.pypa.io/latest/config/dependency/
 dependencies = [
+  
 ]
 dynamic = ["version"]
 
@@ -40,19 +41,19 @@ dev = [
 ]
 
 [project.urls]
-Documentation = "https://github.com/Tomperez98/usecase-registries#readme"
-Issues = "https://github.com/Tomperez98/usecase-registries/issues"
-Source = "https://github.com/Tomperez98/usecase-registries"
+Documentation = "https://github.com/Tomperez98/usecase-registry#readme"
+Issues = "https://github.com/Tomperez98/usecase-registry/issues"
+Source = "https://github.com/Tomperez98/usecase-registry"
 
 [tool.hatch.version]
-path = "usecase_registries/__about__.py"
+path = "usecase_registry/__about__.py"
 
 [tool.coverage.run]
 branch = true
 parallel = true
 omit = [
-  "usecase_registries/__about__.py",
-  "usecase_registries/logging.py"
+  "usecase_registry/__about__.py",
+  "usecase_registry/logging.py"
 ]
 
 [tool.coverage.report]
@@ -71,7 +72,7 @@ force-wrap-aliases = true
 combine-as-imports = true
 
 [tool.ruff.flake8-tidy-imports]
-ban-relative-imports = "all"
+ban-relative-imports = "parents"
 
 [tool.ruff.pyupgrade]
 # Preserve types, even if a file imports `from __future__ import annotations`.
@@ -174,12 +175,12 @@ addopts =[
   "--cov-fail-under=90", 
   "--cov-report=term-missing:skip-covered",
   "--cov-config=pyproject.toml",
-  "--cov=usecase_registries"
+  "--cov=usecase_registry"
 ]
 
 [tool.mypy]
 files = [
-  "usecase_registries",
+  "usecase_registry",
   "tests"
 ]
 
