@@ -1,17 +1,20 @@
-# Welcome to MkDocs
+# Welcome
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+The library implements a simple yet, an important object that is a core component on the why I like to write software. Essentially, the library implements a list with enforce constraints. The constraints are:
 
-## Commands
+1. Fix length
+2. `prune_state` method that only works is the registry contains values.
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+The usage goes as follows:
 
-## Project layout
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+``` python
+from usecase_registry import UseCaseRegistry
+
+registry = UseCaseRegistry[int](max_length=2) # (1)
+```
+
+1.  The `int` typing annotation can be replaced by any other object the `UseCaseRegistry` may store. (`UseCaseRegistry[str]` or `UseCaseRegistry[WriteTransaction]`)
+
+So... how a simple object helps me build a foundation of the way I like to write software.
+The key is a ***workflow*** per ***use case***
