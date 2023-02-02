@@ -31,7 +31,6 @@ sync-to-env: ## sync dev virtualenv
 lint: ## Lint code.
 	mypy $(sources)
 	ruff $(sources)
-	black $(sources)
 
 .PHONY: unit
 unit: ## Run code unittest
