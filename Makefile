@@ -16,11 +16,11 @@ new-release: ## Prepare new release for github.
 .PHONY: refresh-lockfiles
 refresh-lockfiles: ## Rewrite requirements lockfiles
 	@echo "Updating requirements/*.txt files using `pip-compile`"
-	find requirements/ -name '*.txt' ! -name 'all.txt' -type f -delete
 	mkdir -p requirements
 	# https://github.com/dependabot/dependabot-core/issues/3940
-	pip-compile -q --upgrade --no-emit-trusted-host -o requirements/core.txt pyproject.toml --resolver=backtracking
-	pip-compile -q --upgrade --extra dev --no-emit-trusted-host -o requirements/dev.txt pyproject.toml --resolver=backtracking
+	pip-compile -q --upgrade --resolver=backtracking --no-emit-trusted-host -o requirements/core.txt pyproject.toml
+	pip-compile -q --upgrade --extra dev --resolver=backtracking --no-emit-trusted-host -o requirements/dev.txt pyproject.toml
+	rm -f requirements.txt
 
 .PHONY: sync-to-env
 sync-to-env: ## sync dev virtualenv

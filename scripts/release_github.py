@@ -2,9 +2,10 @@
 import pathlib
 import re
 import sys
-import tomllib
 import webbrowser
 from urllib.parse import urlencode
+
+import toml  # type:ignore[import]
 
 
 def main() -> None:
@@ -13,7 +14,7 @@ def main() -> None:
 
     Based on https://github.com/pypa/hatch/blob/master/scripts/release_github.py
     """
-    pkg_data = tomllib.loads(pathlib.Path("pyproject.toml").read_text(encoding="utf-8"))
+    pkg_data = toml.loads(pathlib.Path("pyproject.toml").read_text(encoding="utf-8"))
     about_data = (pathlib.Path("usecase_registry") / "__about__.py").read_text(
         encoding="utf-8"
     )

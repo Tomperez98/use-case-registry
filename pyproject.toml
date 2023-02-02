@@ -32,12 +32,10 @@ dev = [
   "pytest-cov",
   "mypy",
   "ruff",
-  "black",
   "pip-tools",
   "hatch",
-  "mypy",
   "mkdocs-material",
-  "python-dotenv"
+  "toml"
 ]
 
 [project.urls]
