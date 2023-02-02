@@ -23,6 +23,10 @@ class UseCaseRegistry(Generic[T]):
         """Check if registry storage is empty."""
         return len(self._storage) == 0
 
+    def prune_state(self) -> None:
+        """Prune state."""
+        return self._storage.clear()
+        
     def add_value(self, v: T) -> None:
         """Add value to the registry storage."""
         if not isinstance(v, self.__orig_class__.__args__[0]):  # type: ignore[attr-defined] # noqa: E501
