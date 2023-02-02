@@ -26,12 +26,9 @@ class UseCaseRegistry(Generic[T]):
     def prune_state(self) -> None:
         """Prune state."""
         return self._storage.clear()
-        
+
     def add_value(self, v: T) -> None:
         """Add value to the registry storage."""
-        if not isinstance(v, self.__orig_class__.__args__[0]):  # type: ignore[attr-defined] # noqa: E501
-            raise ValueError("The registry only accepts values of configured datatype.")
-
         if len(self._storage) >= self.max_length:
             raise RuntimeError("Storage exceeded max length configured.")
 

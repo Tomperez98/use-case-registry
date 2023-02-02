@@ -20,14 +20,6 @@ class TestUseCaseRegistry:
         registry.prune_state()
         assert registry.is_empty()
 
-    def test_adding_elements_of_different_type(self) -> None:
-        """Test registry fails when adding objects of different types."""
-        registry = UseCaseRegistry[str](max_length=2)
-        assert registry.is_empty()
-        registry.add_value(v="a1")
-        with pytest.raises(ValueError):  # noqa: PT011
-            registry.add_value(v=10)  # type:ignore[arg-type]
-
     def test_registry_can_only_store_up_to_max_capacity(self) -> None:
         """Test registry fails when storage exceeds capacity."""
         registry = UseCaseRegistry[int](max_length=10)
