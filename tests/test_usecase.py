@@ -1,13 +1,12 @@
 """Test for use case."""
-from typing import Type, Any
+from typing import Type
 
 import pytest
+from result import Ok, Result
 
 from usecase_registry import UseCaseRegistry
 from usecase_registry.errors import IdentifiedError
 from usecase_registry.usecase import IUsecase
-
-from result import Result, Ok
 
 
 class TestIUsecase:
@@ -27,6 +26,8 @@ class TestIUsecase:
             )  # type:ignore[abstract]
 
     def test_interface_can_be_extendend(self) -> None:
+        """Test interface can be extended."""
+
         class ConcreteUsecase(IUsecase):
             def __init__(
                 self,
