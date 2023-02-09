@@ -10,11 +10,12 @@ nav:
   - "Home":
     - index.md
     - "One workflow, one usecase": one-workflow-one-usecase.md
+    - "Idempontency, transactions, and retries": idempotency-transactions-retries.md
+    - "Handling errors": handling-errors.md
 
 markdown_extensions:
-  - pymdownx.highlight:
-      anchor_linenums: true
-
+  - admonition
+  - pymdownx.details
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
@@ -22,10 +23,18 @@ markdown_extensions:
   - tables
   - attr_list
   - md_in_html
-  - pymdownx.superfences
 
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
+
+  - pymdownx.tabbed:
+      alternate_style: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+
+  - pymdownx.highlight:
+      anchor_linenums: true

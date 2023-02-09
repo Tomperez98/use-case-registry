@@ -12,6 +12,8 @@ The usage goes as follows:
 from usecase_registry import UseCaseRegistry
 
 registry = UseCaseRegistry[int](max_length=2) # (1)
+# or registry = UseCaseRegistry[str](max_length=2)
+# or registry = UseCaseRegistry[AnotherObject](max_length=2)
 ```
 
 1.  The `int` typing annotation can be replaced by any other object the `UseCaseRegistry` may store. (`UseCaseRegistry[str]` or `UseCaseRegistry[WriteTransaction]`)
