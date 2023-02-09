@@ -13,5 +13,5 @@ class IdentifiedError(abc.ABC, Exception):
     """Parent class for all defined errors at application level."""
 
 
-class CommandInputValidationError(IndentationError):
+class CommandInputValidationError(IdentifiedError):
     """Raised when command input values does pass validation check."""
