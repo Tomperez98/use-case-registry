@@ -33,6 +33,4 @@ class TestUseCaseRegistry:
             registry.add_value(v=value)
 
         with pytest.raises(RuntimeError):
-            registry.add_value(v=10)    
-    
-    
+            registry.add_value(v=10)

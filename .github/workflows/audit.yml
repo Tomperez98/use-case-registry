@@ -1,6 +1,8 @@
 name: audit dependencies
 
-on: workflow_dispatch
+on:
+  schedule:
+    - cron: '55 23 * * *'
 
 concurrency:
   group: test-${{ github.head_ref }}
