@@ -41,7 +41,8 @@ dev = [
 ]
 
 [project.urls]
-Documentation = "https://github.com/Tomperez98/use-case-registry#readme"
+Homepage = "https://github.com/Tomperez98/use-case-registry"
+Documentation = "https://tomperez98.github.io/use-case-registry/"
 Issues = "https://github.com/Tomperez98/use-case-registry/issues"
 Source = "https://github.com/Tomperez98/use-case-registry"
 
