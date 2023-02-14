@@ -4,7 +4,6 @@ on:
   push:
     tags:
     - v*
-    workflows: ["test"]
 
 concurrency:
   group: build-package-${{ github.head_ref }}
