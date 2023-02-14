@@ -1,0 +1,27 @@
+name: temp release docs
+
+on:
+  workflow_dispatch
+
+concurrency:
+  group: test-${{ github.head_ref }}
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  publish-docs:
+    name: Publish docs
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install mkdocs-material
+        run: pip install mkdocs-material
+
+      - name: Deploy docs to GitHub Pages
+        run: mkdocs gh-deploy --force
+
+
