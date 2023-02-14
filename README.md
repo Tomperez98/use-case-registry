@@ -5,6 +5,15 @@
 
 -----
 
+[PyPi](https://pypi.org/project/use-case-registry/)
+
+
+```bash
+pip install use-case-registry
+```
+
+----
+
 Basically a typed annotated list (enforced), with fixed lenght, that can only be checked once. It's thought as a component to implement use cases for more complex applications.
 
 These applications would implement one workflow per use case. The `UseCaseRegistry` convers a wide range of requirements for these workflows.
