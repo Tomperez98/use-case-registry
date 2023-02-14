@@ -14,11 +14,9 @@ class IUsecase(abc.ABC):
     def __init__(
         self,
         write_ops_registry: UseCaseRegistry[Any],
-        errors_registry: UseCaseRegistry[Type[IdentifiedError]],
     ) -> None:
         """use case constructor."""
         self.write_ops_registry = write_ops_registry
-        self.errors_registry = errors_registry
 
     @abc.abstractmethod
     def execute(
