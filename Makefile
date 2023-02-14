@@ -1,7 +1,7 @@
 .DEFAULT_GOAL := help
 SHELL:=/usr/bin/env bash
 OS = $(shell uname | tr A-Z a-z)
-sources = usecase_registry tests scripts
+sources = use_case_registry tests scripts
 
 .PHONY: install
 install: ## Install dev dependencies (MAKE SURE YOU ARE WITHIN A VENV).
@@ -57,7 +57,7 @@ clean: ## Cleans project folder mainly cache
 	@rm -f .coverage.*
 	@rm -f coverage.xml
 	@rm -rf build
-	@find tests usecase_registry -empty -type d -delete
+	@find tests use_case_registry -empty -type d -delete
 
 .PHONY: serve-docs
 serve-docs: ## Serve project documentation

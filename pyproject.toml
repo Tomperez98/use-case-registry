@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "usecase_registry"
+name = "use_case_registry"
 description = "Registry class for Use Case implementation. They are basically meaningfull lists with some constraints."
 readme = "README.md"
 requires-python = ">=3.9"
@@ -41,19 +41,19 @@ dev = [
 ]
 
 [project.urls]
-Documentation = "https://github.com/Tomperez98/usecase-registry#readme"
-Issues = "https://github.com/Tomperez98/usecase-registry/issues"
-Source = "https://github.com/Tomperez98/usecase-registry"
+Documentation = "https://github.com/Tomperez98/use-case-registry#readme"
+Issues = "https://github.com/Tomperez98/use-case-registry/issues"
+Source = "https://github.com/Tomperez98/use-case-registry"
 
 [tool.hatch.version]
-path = "usecase_registry/__about__.py"
+path = "use_case_registry/__about__.py"
 
 [tool.coverage.run]
 branch = true
 parallel = true
 omit = [
-  "usecase_registry/__about__.py",
-  "usecase_registry/logging.py"
+  "use_case_registry/__about__.py",
+  "use_case_registry/logging.py"
 ]
 
 [tool.coverage.report]
@@ -178,12 +178,12 @@ addopts =[
   "--cov-fail-under=90", 
   "--cov-report=term-missing:skip-covered",
   "--cov-config=pyproject.toml",
-  "--cov=usecase_registry"
+  "--cov=use_case_registry"
 ]
 
 [tool.mypy]
 files = [
-  "usecase_registry",
+  "use_case_registry",
   "tests"
 ]
 

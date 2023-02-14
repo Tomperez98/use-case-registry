@@ -1,7 +1,7 @@
 """Tests for command."""
 import pytest
 
-from usecase_registry.command import ICommand
+from use_case_registry.command import ICommand
 
 
 class TestICommand:

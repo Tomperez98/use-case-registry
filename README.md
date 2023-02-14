@@ -1,7 +1,7 @@
-# usecase-registry
+# use-case-registry
 
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/charliermarsh/ruff/main/assets/badge/v1.json)](https://github.com/charliermarsh/ruff)
-[![Build Status](https://github.com/Tomperez98/usecase-registry/workflows/test/badge.svg?branch=main&event=push)](https://github.com/Tomperez98/usecase-registry/actions?query=workflow%3Atest)
+[![Build Status](https://github.com/Tomperez98/use-case-registry/workflows/test/badge.svg?branch=main&event=push)](https://github.com/Tomperez98/use-case-registry/actions?query=workflow%3Atest)
 
 -----
 

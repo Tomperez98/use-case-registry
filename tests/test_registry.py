@@ -1,7 +1,7 @@
 """Tests for registry."""
 import pytest
 
-from usecase_registry.registry import UseCaseRegistry
+from use_case_registry.registry import UseCaseRegistry
 
 
 class TestUseCaseRegistry:

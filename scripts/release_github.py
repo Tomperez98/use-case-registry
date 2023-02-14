@@ -15,7 +15,7 @@ def main() -> None:
     Based on https://github.com/pypa/hatch/blob/master/scripts/release_github.py
     """
     pkg_data = toml.loads(pathlib.Path("pyproject.toml").read_text(encoding="utf-8"))
-    about_data = (pathlib.Path("usecase_registry") / "__about__.py").read_text(
+    about_data = (pathlib.Path("use_case_registry") / "__about__.py").read_text(
         encoding="utf-8"
     )
     search_result = re.search(r"__version__ = \"(.*?)\"", about_data)

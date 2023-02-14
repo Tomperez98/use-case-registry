@@ -9,7 +9,7 @@ anyio==3.6.2
 attrs==22.2.0
     # via pytest
 black==23.1.0
-    # via usecase_registry (pyproject.toml)
+    # via use_case_registry (pyproject.toml)
 build==0.10.0
     # via pip-tools
 certifi==2022.12.7
@@ -43,7 +43,7 @@ ghp-import==2.1.0
 h11==0.14.0
     # via httpcore
 hatch==1.6.3
-    # via usecase_registry (pyproject.toml)
+    # via use_case_registry (pyproject.toml)
 hatchling==1.13.0
     # via hatch
 httpcore==0.16.3
@@ -86,13 +86,13 @@ mergedeep==1.3.4
 mkdocs==1.4.2
     # via mkdocs-material
 mkdocs-material==9.0.11
-    # via usecase_registry (pyproject.toml)
+    # via use_case_registry (pyproject.toml)
 mkdocs-material-extensions==1.1.1
     # via mkdocs-material
 more-itertools==9.0.0
     # via jaraco-classes
 mypy==1.0.0
-    # via usecase_registry (pyproject.toml)
+    # via use_case_registry (pyproject.toml)
 mypy-extensions==1.0.0
     # via
     #   black
@@ -112,7 +112,7 @@ pathspec==0.11.0
 pexpect==4.8.0
     # via hatch
 pip-tools==6.12.2
-    # via usecase_registry (pyproject.toml)
+    # via use_case_registry (pyproject.toml)
 platformdirs==3.0.0
     # via
     #   black
@@ -137,9 +137,9 @@ pyproject-hooks==1.0.0
 pytest==7.2.1
     # via
     #   pytest-cov
-    #   usecase_registry (pyproject.toml)
+    #   use_case_registry (pyproject.toml)
 pytest-cov==4.0.0
-    # via usecase_registry (pyproject.toml)
+    # via use_case_registry (pyproject.toml)
 python-dateutil==2.8.2
     # via ghp-import
 pyyaml==6.0
@@ -153,13 +153,13 @@ regex==2022.10.31
 requests==2.28.2
     # via mkdocs-material
 result==0.9.0
-    # via usecase_registry (pyproject.toml)
+    # via use_case_registry (pyproject.toml)
 rfc3986[idna2008]==1.5.0
     # via httpx
 rich==13.3.1
     # via hatch
 ruff==0.0.244
-    # via usecase_registry (pyproject.toml)
+    # via use_case_registry (pyproject.toml)
 shellingham==1.5.0.post1
     # via hatch
 six==1.16.0
@@ -170,7 +170,7 @@ sniffio==1.3.0
     #   httpcore
     #   httpx
 toml==0.10.2
-    # via usecase_registry (pyproject.toml)
+    # via use_case_registry (pyproject.toml)
 tomli==2.0.1
     # via
     #   black

@@ -4,9 +4,9 @@ from typing import Type
 import pytest
 from result import Ok, Result
 
-from usecase_registry import UseCaseRegistry
-from usecase_registry.errors import IdentifiedError
-from usecase_registry.usecase import IUsecase
+from use_case_registry import UseCaseRegistry
+from use_case_registry.errors import IdentifiedError
+from use_case_registry.use_case import IUsecase
 
 
 class TestIUsecase:

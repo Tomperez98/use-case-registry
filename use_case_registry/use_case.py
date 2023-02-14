@@ -17,11 +17,11 @@ class IUsecase(abc.ABC):
         result_registry: UseCaseRegistry[Any],
         errors_registry: UseCaseRegistry[Type[IdentifiedError]],
     ) -> None:
-        """Usecase constructor."""
+        """use case constructor."""
         self.write_ops_registry = write_ops_registry
         self.result_registry = result_registry
         self.errors_registry = errors_registry
 
     @abc.abstractmethod
     def execute(self) -> Result[None, Exception]:
-        """Workflow execution command to complete the usecase."""
+        """Workflow execution command to complete the use case."""
