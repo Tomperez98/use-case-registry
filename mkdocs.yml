@@ -19,6 +19,8 @@ nav:
     - "clean_architecture/index.md"
   - One Use Case, One Workflow:
     - "one_use_case_one_workflow/index.md"
+  - Error Handling:
+    - "error_handling/index.md"
 
 
 markdown_extensions:
@@ -26,6 +28,10 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.superfences
   - footnotes
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
 
 
 repo_url: https://github.com/Tomperez98/use-case-registry
