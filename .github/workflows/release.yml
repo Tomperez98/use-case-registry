@@ -50,10 +50,12 @@ jobs:
   publish-docs:
     name: Publish docs
     needs:
-      - publish
-    runs-on: ubunut-latest
+    - publish
+    runs-on: ubuntu-latest
 
     steps:
+      - uses: actions/checkout@v3
+      
       - name: Install mkdocs-material
         run: pip install mkdocs-material
 
