@@ -1,5 +1,5 @@
 """Test for use case."""
-from typing import Type, Union
+from typing import Union
 
 import pytest
 from result import Ok, Result
@@ -16,12 +16,9 @@ class TestIUsecase:
         """IUsecase is an interface an cannot be instantiated."""
         write_ops_registry = UseCaseRegistry[str](max_length=1)
 
-        errors_registry = UseCaseRegistry[Type[IdentifiedError]](max_length=0)
-
         with pytest.raises(TypeError):
             IUsecase(
                 write_ops_registry=write_ops_registry,
-                errors_registry=errors_registry,
             )  # type:ignore[abstract]
 
     def test_interface_can_be_extendend(self) -> None:
@@ -33,12 +30,11 @@ class TestIUsecase:
                 name: str,
                 last_name: str,
                 write_ops_registry: UseCaseRegistry[str],
-                errors_registry: UseCaseRegistry[Type[IdentifiedError]],
             ) -> None:
                 """Construct concrete implementation."""
                 self.name = name
                 self.last_name = last_name
-                super().__init__(write_ops_registry, errors_registry)
+                super().__init__(write_ops_registry)
 
             def execute(
                 self,
@@ -47,10 +43,8 @@ class TestIUsecase:
 
         write_ops_registry = UseCaseRegistry[str](max_length=1)
 
-        errors_registry = UseCaseRegistry[Type[IdentifiedError]](max_length=0)
         ConcreteUsecase(
             name="Peter",
             last_name="Parket",
             write_ops_registry=write_ops_registry,
-            errors_registry=errors_registry,
         )

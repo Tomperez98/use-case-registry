@@ -1,6 +1,6 @@
 """Interface for concrete usecases."""
 import abc
-from typing import Any, Type, Union
+from typing import Any, Union
 
 from result import Result
 
