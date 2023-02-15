@@ -15,12 +15,13 @@ theme:
 nav:
   - "What is this?":
     - "index.md"
-  - Clean Architecture:
-    - "clean_architecture/index.md"
-  - One Use Case, One Workflow:
-    - "one_use_case_one_workflow/index.md"
-  - Error Handling:
-    - "error_handling/index.md"
+  - General Thoughts:
+    - Clean Architecture:
+      - "general-thoughts/clean-architecture/index.md"
+    - One Use Case, One Workflow:
+      - "general-thoughts/one-use-case-one-workflow/index.md"
+    - Error Handling:
+      - "general-thoughts/error-handling/index.md"
 
 
 markdown_extensions:
