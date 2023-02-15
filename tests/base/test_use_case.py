@@ -1,12 +1,11 @@
 """Test for use case."""
-from typing import Union
+
 
 import pytest
 from result import Ok, Result
 
 from use_case_registry import UseCaseRegistry
-from use_case_registry.errors import IdentifiedError, NotIdentifiedError
-from use_case_registry.use_case import IUsecase
+from use_case_registry.base.use_case import IUsecase
 
 
 class TestIUsecase:
@@ -38,7 +37,7 @@ class TestIUsecase:
 
             def execute(
                 self,
-            ) -> Result[None, Union[IdentifiedError, NotIdentifiedError]]:
+            ) -> Result[None, Exception]:
                 return Ok()
 
         write_ops_registry = UseCaseRegistry[str](max_length=1)

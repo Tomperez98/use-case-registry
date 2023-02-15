@@ -3,7 +3,7 @@ import abc
 
 from result import Result
 
-from .errors import CommandInputValidationError
+from use_case_registry.errors import CommandInputValidationError
 
 
 class ICommand(abc.ABC):

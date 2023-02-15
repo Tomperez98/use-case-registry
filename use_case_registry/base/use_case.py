@@ -1,11 +1,10 @@
 """Interface for concrete usecases."""
 import abc
-from typing import Any, Union
+from typing import Any
 
 from result import Result
 
-from .errors import IdentifiedError, NotIdentifiedError
-from .registry import UseCaseRegistry
+from use_case_registry.registry import UseCaseRegistry
 
 
 class IUsecase(abc.ABC):
@@ -21,5 +20,5 @@ class IUsecase(abc.ABC):
     @abc.abstractmethod
     def execute(
         self,
-    ) -> Result[Any, Union[IdentifiedError, NotIdentifiedError]]:
+    ) -> Result[Any, Exception]:
         """Workflow execution command to complete the use case."""
