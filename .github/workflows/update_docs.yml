@@ -12,8 +12,6 @@ permissions:
 jobs:
   publish-docs:
     name: Publish docs
-    needs:
-    - publish
     runs-on: ubuntu-latest
 
     steps:
