@@ -74,7 +74,7 @@ force-wrap-aliases = true
 combine-as-imports = true
 
 [tool.ruff.flake8-tidy-imports]
-ban-relative-imports = "parents"
+ban-relative-imports = "all"
 
 [tool.ruff.pylint]
 max-args = 6
