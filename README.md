@@ -5,11 +5,12 @@
 | Name                                     |    Stmts |     Miss |   Branch |   BrPart |      Cover |   Missing |
 |----------------------------------------- | -------: | -------: | -------: | -------: | ---------: | --------: |
 | use\_case\_registry/\_\_init\_\_.py      |        2 |        0 |        0 |        0 |     100.0% |           |
-| use\_case\_registry/base/\_\_init\_\_.py |        2 |        0 |        0 |        0 |     100.0% |           |
+| use\_case\_registry/base/\_\_init\_\_.py |        3 |        0 |        0 |        0 |     100.0% |           |
 | use\_case\_registry/base/command.py      |       10 |        0 |        0 |        0 |     100.0% |           |
-| use\_case\_registry/errors.py            |        1 |        0 |        0 |        0 |     100.0% |           |
+| use\_case\_registry/base/repository.py   |       10 |        0 |        0 |        0 |     100.0% |           |
+| use\_case\_registry/errors.py            |        4 |        0 |        0 |        0 |     100.0% |           |
 | use\_case\_registry/registry.py          |       18 |        0 |        4 |        0 |     100.0% |           |
-|                                **TOTAL** |   **33** |    **0** |    **4** |    **0** | **100.0%** |           |
+|                                **TOTAL** |   **47** |    **0** |    **4** |    **0** | **100.0%** |           |
 
 
 ## Setup coverage badge
