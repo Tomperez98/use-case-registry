@@ -1,8 +1,9 @@
 """Test for repository."""
 
 from typing import Any
+
 import pytest
-from result import Err, Ok, Result
+from result import Result
 
 from use_case_registry import UseCaseRegistry
 from use_case_registry.base import IRepository

@@ -1,7 +1,7 @@
 """Tests for errors."""
-from use_case_registry.errors import NotDefinedError
-
 import pytest
+
+from use_case_registry.errors import NotDefinedError
 
 
 @pytest.mark.parametrize(
@@ -21,5 +21,6 @@ import pytest
     ],
 )
 def test_error_message(error: Exception, expected_msg: str) -> None:
+    """Test error message."""
     err = NotDefinedError(error=error)
     assert str(err) == expected_msg
