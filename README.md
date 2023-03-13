@@ -2,15 +2,17 @@
 
 [Full report](https://htmlpreview.github.io/?https://github.com/Tomperez98/use-case-registry/blob/python-coverage-comment-action-data/htmlcov/index.html)
 
-| Name                                     |    Stmts |     Miss |   Branch |   BrPart |      Cover |   Missing |
-|----------------------------------------- | -------: | -------: | -------: | -------: | ---------: | --------: |
-| use\_case\_registry/\_\_init\_\_.py      |        2 |        0 |        0 |        0 |     100.0% |           |
-| use\_case\_registry/base/\_\_init\_\_.py |        3 |        0 |        0 |        0 |     100.0% |           |
-| use\_case\_registry/base/command.py      |       10 |        0 |        0 |        0 |     100.0% |           |
-| use\_case\_registry/base/repository.py   |       10 |        0 |        0 |        0 |     100.0% |           |
-| use\_case\_registry/errors.py            |        4 |        0 |        0 |        0 |     100.0% |           |
-| use\_case\_registry/registry.py          |       18 |        0 |        4 |        0 |     100.0% |           |
-|                                **TOTAL** |   **47** |    **0** |    **4** |    **0** | **100.0%** |           |
+| Name                                          |    Stmts |     Miss |   Branch |   BrPart |     Cover |   Missing |
+|---------------------------------------------- | -------: | -------: | -------: | -------: | --------: | --------: |
+| use\_case\_registry/\_\_init\_\_.py           |        2 |        0 |        0 |        0 |    100.0% |           |
+| use\_case\_registry/base/\_\_init\_\_.py      |        3 |        0 |        0 |        0 |    100.0% |           |
+| use\_case\_registry/base/command.py           |       10 |        0 |        0 |        0 |    100.0% |           |
+| use\_case\_registry/base/repository.py        |       10 |        0 |        0 |        0 |    100.0% |           |
+| use\_case\_registry/errors.py                 |        9 |        2 |        0 |        0 |     77.8% |    17, 25 |
+| use\_case\_registry/internals/\_\_init\_\_.py |        0 |        0 |        0 |        0 |    100.0% |           |
+| use\_case\_registry/internals/errors.py       |        6 |        0 |        0 |        0 |    100.0% |           |
+| use\_case\_registry/registry.py               |       19 |        0 |        4 |        0 |    100.0% |           |
+|                                     **TOTAL** |   **59** |    **2** |    **4** |    **0** | **96.8%** |           |
 
 
 ## Setup coverage badge
