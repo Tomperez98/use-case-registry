@@ -6,7 +6,7 @@ from typing import Any
 from result import Ok, Result
 
 from use_case_registry import UseCaseRegistry
-from use_case_registry.errors import NotDefinedError
+from use_case_registry.errors import CommitTransactionsError
 
 
 class IRepository(abc.ABC):
@@ -16,7 +16,7 @@ class IRepository(abc.ABC):
     def commit_write_transaction(
         self,
         write_operations: UseCaseRegistry[Any],
-    ) -> Result[None, NotDefinedError]:
+    ) -> Result[None, CommitTransactionsError]:
         """Commit a set of write operations as a transaction."""
         write_operations.prune_state()
         return Ok()

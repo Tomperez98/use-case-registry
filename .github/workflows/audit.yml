@@ -2,7 +2,7 @@ name: audit dependencies
 
 on:
   schedule:
-    - cron: '55 23 * * *'
+    - cron: "55 23 * * *"
 
 concurrency:
   group: test-${{ github.head_ref }}
@@ -16,20 +16,21 @@ jobs:
       fail-fast: false
       matrix:
         os: [ubuntu-latest]
-        python-version: ["3.11"]
 
     steps:
       - uses: actions/checkout@v3
-      
-      - name: Set up Python ${{ matrix.python-version }}
+
+      - name: Read `.tool-versions`
+        uses: marocchino/tool-versions-action@v1.1.1
+        id: versions
+
+      - name: Set up Python ${{ steps.versions.outputs.python }}
         uses: actions/setup-python@v4
         with:
-          python-version: ${{ matrix.python-version }}
+          python-version: ${{ steps.versions.outputs.python }}
 
       - name: Install pip audit
         run: pip install pip-audit
 
       - name: Audit dependencies
         run: pip-audit -r requirements/core.txt -l --desc
-
-

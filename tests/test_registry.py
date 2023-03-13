@@ -1,6 +1,10 @@
 """Tests for registry."""
 import pytest
 
+from use_case_registry.internals.errors import (
+    UseCaseRagistryEmptyError,
+    UseCaseRegistryLengthExceedError,
+)
 from use_case_registry.registry import UseCaseRegistry
 
 
@@ -23,7 +27,7 @@ class TestUseCaseRegistry:
     def test_empty_registry_cannot_be_prune(self) -> None:
         """Test empty registry cannot be pruned."""
         registry = UseCaseRegistry[int](max_length=10)
-        with pytest.raises(RuntimeError):
+        with pytest.raises(UseCaseRagistryEmptyError):
             registry.prune_state()
 
     def test_registry_can_only_store_up_to_max_capacity(self) -> None:
@@ -32,5 +36,5 @@ class TestUseCaseRegistry:
         for value in range(10):
             registry.add_value(v=value)
 
-        with pytest.raises(RuntimeError):
+        with pytest.raises(UseCaseRegistryLengthExceedError):
             registry.add_value(v=10)

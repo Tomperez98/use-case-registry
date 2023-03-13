@@ -4,7 +4,7 @@ from result import Err, Ok, Result
 
 from use_case_registry import UseCaseRegistry
 from use_case_registry.base import ICommand
-from use_case_registry.errors import CommandInputValidationError
+from use_case_registry.errors import CommandInputValidationError, UseCaseExecutionError
 
 
 class TestICommand:
@@ -33,8 +33,9 @@ class TestICommand:
                 return Ok()
 
             def execute(
-                self, write_ops_registry: UseCaseRegistry[str]
-            ) -> Result[str, Exception]:
+                self,
+                write_ops_registry: UseCaseRegistry[str],
+            ) -> Result[str, UseCaseExecutionError]:
                 _ = write_ops_registry
                 return Ok()
 

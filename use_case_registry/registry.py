@@ -2,6 +2,11 @@
 
 from typing import Generic, TypeVar
 
+from use_case_registry.internals.errors import (
+    UseCaseRagistryEmptyError,
+    UseCaseRegistryLengthExceedError,
+)
+
 T = TypeVar("T")
 
 
@@ -26,13 +31,13 @@ class UseCaseRegistry(Generic[T]):
     def prune_state(self) -> None:
         """Prune state."""
         if self.is_empty():
-            raise RuntimeError("Registry is already empty.")
+            raise UseCaseRagistryEmptyError
         return self._storage.clear()
 
     def add_value(self, v: T) -> None:
         """Add value to the registry storage."""
         if len(self._storage) >= self.max_length:
-            raise RuntimeError("Storage exceeded max length configured.")
+            raise UseCaseRegistryLengthExceedError
 
         self._storage.append(v)
 

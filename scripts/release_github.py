@@ -1,4 +1,4 @@
-"""Release GitHub."""
+"""Release GitHub."""  # noqa: INP001
 import pathlib
 import re
 import sys
@@ -16,7 +16,7 @@ def main() -> None:
     """
     pkg_data = toml.loads(pathlib.Path("pyproject.toml").read_text(encoding="utf-8"))
     about_data = (pathlib.Path("use_case_registry") / "__about__.py").read_text(
-        encoding="utf-8"
+        encoding="utf-8",
     )
     search_result = re.search(r"__version__ = \"(.*?)\"", about_data)
     if search_result is None:
@@ -27,13 +27,14 @@ def main() -> None:
         query={
             "title": f"v{version}",
             "tag": f"v{version}",
-        }
+        },
     )
 
     webbrowser.open_new_tab(
         url="{source}/releases/new?{params}".format(
-            source=pkg_data["project"]["urls"]["Source"], params=params
-        )
+            source=pkg_data["project"]["urls"]["Source"],
+            params=params,
+        ),
     )
 
 

@@ -38,18 +38,18 @@ jobs:
       - name: Run code
         run: make test
         env:
-          COVERAGE_FILE: ".coverage.${{ matrix.python-version }}"
+          COVERAGE_FILE: ".coverage.${{ matrix.python-version }}-${{ matrix.os }}"
 
       - name: Store coverage file
         uses: actions/upload-artifact@v3
         with:
           name: coverage
-          path: .coverage.${{ matrix.python-version }}
+          path: .coverage.${{ matrix.python-version }}-${{ matrix.os }}
 
   coverage:
     name: Merging coverage reports
     needs:
-    - run
+      - run
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write
@@ -61,7 +61,7 @@ jobs:
       - uses: actions/download-artifact@v3
         id: download
         with:
-          name: 'coverage'
+          name: "coverage"
 
       - name: Coverage comment
         id: coverage_comment
@@ -76,6 +76,3 @@ jobs:
         with:
           name: python-coverage-comment-action
           path: python-coverage-comment-action.txt
-
-
-

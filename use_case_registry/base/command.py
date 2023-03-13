@@ -5,7 +5,7 @@ from typing import Any
 from result import Result
 
 from use_case_registry import UseCaseRegistry
-from use_case_registry.errors import CommandInputValidationError
+from use_case_registry.errors import CommandInputValidationError, UseCaseExecutionError
 
 
 class ICommand(abc.ABC):
@@ -19,5 +19,5 @@ class ICommand(abc.ABC):
     def execute(
         self,
         write_ops_registry: UseCaseRegistry[Any],
-    ) -> Result[Any, Exception]:
+    ) -> Result[Any, UseCaseExecutionError]:
         """Workflow execution command to complete the use case."""

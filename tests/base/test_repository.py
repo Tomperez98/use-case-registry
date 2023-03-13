@@ -7,7 +7,7 @@ from result import Result
 
 from use_case_registry import UseCaseRegistry
 from use_case_registry.base import IRepository
-from use_case_registry.errors import NotDefinedError
+from use_case_registry.errors import CommitTransactionsError
 
 
 class TestICommand:
@@ -26,8 +26,9 @@ class TestICommand:
                 """Construct concrete implementation."""
 
             def commit_write_transaction(
-                self, write_operations: UseCaseRegistry[Any]
-            ) -> Result[None, NotDefinedError]:
+                self,
+                write_operations: UseCaseRegistry[Any],
+            ) -> Result[None, CommitTransactionsError]:
                 return super().commit_write_transaction(write_operations)
 
         repo = ConcreteRepository()
